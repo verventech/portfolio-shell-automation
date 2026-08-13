@@ -7,16 +7,17 @@ CREATE DATABASE portfolio_db OWNER musharaf;
 SET ROLE musharaf;
 
 -- Drop the table if it already exists
-DROP TABLE IF EXISTS education;
 
 -- Create the education table (What step 5 is doing)
-CREATE TABLE education (
+CREATE TABLE IF NOT EXISTS education (
     id SERIAL PRIMARY KEY,
     course_name VARCHAR(255) NOT NULL,
     session VARCHAR(50) NOT NULL,
     cgpa NUMERIC(3, 2) NOT NULL,
     institute VARCHAR(255) NOT NULL
 );
+
+TRUNCATE TABLE education;
 
 -- Insert sample portfolio data
 INSERT INTO education (course_name, session, cgpa, institute) VALUES 
