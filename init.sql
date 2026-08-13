@@ -4,7 +4,7 @@ CREATE DATABASE portfolio_db OWNER musharaf;
 
 -- Connect to the new database 
 \c portfolio_db
-SET ROLE musharaf
+SET ROLE musharaf;
 
 -- Drop the table if it already exists
 DROP TABLE IF EXISTS education;
